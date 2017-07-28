@@ -1,0 +1,4 @@
+---
+- name: ANSISTRANO | Rsync from current release to a previous one
+  command: rsync -a -F --no-times  "{{ ansistrano_deploy_to }}/{{ ansistrano_version_dir }}/{{ ansistrano_rollback_release_version }}/" "{{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}"
+

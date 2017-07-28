@@ -1,0 +1,13 @@
+---
+- name: Deploy app
+  hosts: all
+  vars:
+    ansistrano_deploy_from: "/home/appsource"
+    ansistrano_deploy_to: "/opt/my-app.com"
+    ansistrano_keep_releases: 3
+    # There seems to be an issue with rsync in vagrant
+    ansistrano_current_via: rsync
+    ansistrano_deploy_via: rsync
+    ansistrano_after_symlink_tasks_file: my-custom-tasks/after-symlink.yml
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-deploy }

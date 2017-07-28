@@ -1,0 +1,5 @@
+---
+
+- name: ANSISTRANO | Sync release to new current path
+  command: uwsgi --reload /my-app/wsgi.ini
+

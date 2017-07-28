@@ -1,0 +1,9 @@
+---
+- name: Rollback example app to my-server.com
+  hosts: all
+  vars:
+    ansistrano_deploy_to: "/opt/my-app.com"
+    ansistrano_policy: rsync
+    ansistrano_after_symlink_tasks_file: my-custom-tasks/after-symlink.yml
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-rollback }
