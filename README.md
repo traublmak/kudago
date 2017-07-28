@@ -7,15 +7,17 @@ Installation & running
 ------------
 
 
-1.
-Clone the repository and run the built in web server using:
-   pip3 install requirements.txt
-   uwsgi --ini wsgi.ini
-   Go to: http://localhost:5000 (or http://yuordomainname:5000)    
+### 1. Run on web-server
 
-2. Using Docker
-Clone the repository and run:
-   docker build . -t urlshortener
-   docker  run -it -d -p 0.0.0.0:5001:5000 urlshortener:latest
-   Go to: http://localhost:5001 (or http://yuordomainname:5001)
+ - Clone the repository and run the built in web server using:
+ - pip3 install requirements.txt
+ - uwsgi --ini wsgi.ini
+ - Go to: http://localhost:5000 (or http://yuordomainname:5000)    
+
+### 2. Using Docker
+
+ - Clone the repository and run:
+ - docker build . -t urlshortener
+ - docker  run -it -d -p 0.0.0.0:5001:5000 urlshortener:latest
+ - Go to: http://localhost:5001 (or http://yuordomainname:5001)
 
